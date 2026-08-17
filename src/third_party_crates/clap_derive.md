@@ -363,6 +363,9 @@ fn main() {
 }
 ```
 
+> [!NOTE]
+> argv is short for argument vector
+
 Real `clap`'s pipeline has one more step our version compresses out:
 
 ```sh
