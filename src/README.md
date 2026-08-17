@@ -1,5 +1,7 @@
 # Introduction
 
+![rust-gaps](img/rust-gaps.png)
+
 The Rust Programming Language book teaches you the language. It does not teach
 you how to use it.
 
