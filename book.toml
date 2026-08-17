@@ -1,0 +1,9 @@
+[book]
+title = "rust-gaps"
+authors = ["saylesss88"]
+language = "en"
+
+[output.html]
+site-url = "https://saylesss88.github.io/rust-gaps"
+default-theme = "navy"
+preferred-dark-theme = "navy"
