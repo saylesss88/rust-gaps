@@ -170,10 +170,6 @@ The code does exactly the same thing as Pass 1. What changed is the structure:
 - `main` is now only responsible for error handling and output. The three phases
   are cleanly separated
 
-Notice that main now receives a clean `Args` value with no `Option` or `Result`
-to unwrap. This is the pattern `clap` enforces: by the time you reach your
-logic, parsing and validation are already done.
-
 ## Pass 3: `clap` derive
 
 Now replace `build` with `#[derive(Parser)]`:
@@ -204,9 +200,13 @@ fn main() {
 }
 ```
 
-The struct is identical. `main` is identical. The only things that disappeared
-are `build()` and the `unwrap_or_else`, `clap` handles both. What you get in
-exchange:
+> [!NOTE] Notice that `main` now receives a clean `Args` value with no `Option`
+> or `Result` to unwrap. This is the pattern `clap` enforces: by the time you
+> reach your logic, parsing and validation are already done.
+
+The struct is identical. `main` is very similar, besides the above note. The
+only things that disappeared are `build()` and the `unwrap_or_else`, `clap`
+handles both. What you get in exchange:
 
 - Automatic `--help` and `--version` flags
 - Typed error messages with usage hints when the user passes bad input
